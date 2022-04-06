@@ -1,0 +1,31 @@
+import random
+STARTING_BALANCE = 100 
+loop = 5
+balance = STARTING_BALANCE
+while loop != 0:
+for item in range(500):
+    number = random.randint(1,100)
+
+if 1 <= number <= 5:
+    token = 'unicorn'
+    balance += 4
+elif 6 <= number <= 36:
+    token = 'donkey'
+    balance -= 1
+else:
+    if number % 2 == 0:
+        token = 'zebra'
+        balance -= 0.5
+    else: 
+        token = 'horse'
+        balance -= .5
+    
+if token == 'Unicorn':
+    balance += 4
+elif token == 'Donkey':
+    balance -= 1
+else:
+    balance -= .50
+
+print(f'Starting Balance = ${STARTING_BALANCE:.2f}')
+print(f'Final Balance = ${balance:.2f}')
